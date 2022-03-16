@@ -149,7 +149,7 @@ func (_m *ClusterCache) IsNamespaced(gk schema.GroupKind) (bool, error) {
 }
 
 // IterateHierarchy provides a mock function with given fields: key, action
-func (_m *ClusterCache) IterateHierarchy(key kube.ResourceKey, action func(*cache.Resource, map[kube.ResourceKey]*cache.Resource)) {
+func (_m *ClusterCache) IterateHierarchy(key kube.ResourceKey, action func(*cache.Resource, map[kube.ResourceKey]*cache.Resource) bool) {
 	_m.Called(key, action)
 }
 
